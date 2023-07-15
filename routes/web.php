@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Participant;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::post('/save-confirmation', function (\Illuminate\Http\Request $request) {
+
+    Participant::create($request->all());
+
+    return redirect('/');
+
 });

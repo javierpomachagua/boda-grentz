@@ -1,0 +1,456 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trirong", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    /* color: #776153; */
+    color: #1b1b1bc4;
+    font-weight: 600;
+}
+
+html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    /* Does NOT work on Safari */
+    /* scroll-behavior: smooth; */
+}
+
+.container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+/**************** PRIMERA PAGINA ****************/
+.main-section {
+    background-image: url(../../img/Fondos/1.jpg);
+    background-size: cover;
+}
+
+.main-section-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.symbols-letters {
+    font-size: 70px;
+    margin-bottom: -50px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    /* color: #4c0b16; */
+}
+
+#contenedor-reproductor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#boton-reproducir {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-music {
+    color: #4c0b16;
+    background-color: #f9f2df;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px #686868c4;
+
+    cursor: pointer;
+}
+
+.btn-music:hover {
+    background-color: #4c0b16;
+    color: #f9f2df;
+    transition: all 0.5s;
+}
+
+#barra-reproduccion {
+    width: 200px;
+    height: 5px;
+    background-color: #f9f2df;
+}
+
+#progreso {
+    width: 0%;
+    height: 100%;
+    background-color: #4c0b16;
+    border-radius: 10px;
+}
+
+.music::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+.symbol {
+    margin-top: 30px;
+    opacity: 0.5;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.date {
+    font-size: 26px;
+}
+
+.location {
+    font-size: 18px;
+}
+
+.timer-span {
+    font-size: 30px;
+}
+
+/********TIMER************/
+#contador {
+    font-size: 15px;
+    background-color: rgb(249, 242, 223);
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px 40px;
+}
+
+.timer-days,
+.timer-hours,
+.timer-minutes,
+.timer-seconds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.timer-letters,
+#dias,
+#horas,
+#minutos,
+#segundos {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.timer-space {
+    padding: 20px 0px;
+}
+
+/**************** SECCION IMAGENES ****************/
+
+.section-2 {
+    background-image: url(img/Fondos/2.jpg);
+    background-size: cover;
+}
+
+.Images-wedding {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 80px 0px;
+    overflow: hidden;
+}
+
+.Images-wedding img {
+    margin-right: -72px;
+    border-radius: 1%;
+
+    display: block;
+
+    transition: all 0.8s;
+}
+
+.Images-wedding img:hover {
+    transform: scale(1.1);
+}
+
+/**************** SECCION 3 ****************/
+
+.section-3 {
+    background-image: url(img/Fondos/3.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.icon {
+    color: #4c0b16;
+    font-size: 10px;
+    width: 50%;
+    height: auto;
+    /* transform: scale(2); */
+}
+
+.ceremonia,
+.recepcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tittle {
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.hour,
+.address {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 40px;
+    border-radius: 9px;
+    border: none;
+    color: #1b1b1bc4;
+    background-color: #f9f2df;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.btn:link,
+.btn:visited {
+    border: none;
+    color: #1b1b1bc4;
+    background-color: #f9f2df;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #4e0b16;
+    color: #fff;
+}
+
+/**************** SECCION 4 ****************/
+.section-4 {
+    background-image: url(img/Fondos/4.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 150px 100px;
+}
+
+.gifs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    background-color: #fff;
+    box-shadow: 0 10px 18px #686868c4;
+
+    /* border: 1px solid #1b1b1bc4; */
+    border-radius: 9px;
+    padding: 30px 0px;
+    width: 450px;
+    height: auto;
+}
+
+.gifs:hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+
+.gifs-words {
+    font-size: 15px;
+    font-weight: 600;
+    width: 80%;
+    height: auto;
+    word-spacing: 3px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.btn-gifs {
+    font-size: 16px;
+    padding: 7px 40px;
+    font-weight: bold;
+}
+
+.tittle-gifs {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/**************** SECCION 4-1 ****************/
+
+.section-4-1 {
+    background-color: #faf7e4e0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.vestimenta {
+    font-size: 28px;
+}
+
+.vestimenta-span {
+    font-size: 23px;
+    font-weight: 550;
+}
+
+.icon-dress {
+    background-color: #4c0b16;
+    border-radius: 38px;
+    width: 250px;
+    height: auto;
+}
+
+/**************** SECCION 5 ****************/
+
+.section-5 {
+    background-image: url(img/Fondos/5.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+
+.letter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.asistencia {
+    font-family: cinzel;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nombre-completo,
+#telefono,
+#confirmacion,
+#mensaje {
+    background-color: #f9f2df;
+    border: none;
+    padding: 10px 100px 10px 10px;
+    border-radius: 3px;
+}
+
+#confirmacion {
+    color: #3f3f3fc4;
+}
+
+#mensaje {
+    width: 617px;
+    height: 135px;
+}
+
+.first-block-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.second-block-cta {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-dot-block-cta {
+}
+
+.third-block-cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-wsp {
+    width: 46px;
+    height: auto;
+}
+
+.btn-cta {
+    padding: 10px 50px;
+}
+
+/**************** FOOTER ****************/
+
+.footer {
+    background-color: rgb(78, 11, 22);
+    color: beige;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 60px 0px;
+}
+
+.footer-p {
+    font-size: 18px;
+    font-weight: 600;
+    width: 600px;
+
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer-hashtag {
+    font-size: 25px;
+    font-style: italic;
+}

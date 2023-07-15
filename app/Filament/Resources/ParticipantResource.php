@@ -19,19 +19,14 @@ class ParticipantResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                //
-            ]);
-    }
-
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('cellphone'),
+                Tables\Columns\TextColumn::make('confirmation'),
+                Tables\Columns\TextColumn::make('message'),
             ])
             ->filters([
                 //
@@ -43,20 +38,12 @@ class ParticipantResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-    
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListParticipants::route('/'),
-            'create' => Pages\CreateParticipant::route('/create'),
             'edit' => Pages\EditParticipant::route('/{record}/edit'),
         ];
-    }    
+    }
 }
