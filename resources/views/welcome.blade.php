@@ -587,25 +587,26 @@
         <span class="asistencia">CONFIRMA TU ASISTENCIA</span>
         <span></span>
     </div>
-    <form class="cta-form">
+    <form class="cta-form" method="POST" action="/save-confirmation">
+        @csrf
         <div class="first-block-cta">
             <input
                 id="nombre-completo"
                 type="text"
                 placeholder="Nombre completo"
-                name="full-name"
+                name="name"
                 required
             />
             <input
                 type="tel"
                 id="telefono"
-                name="telefono"
+                name="cellphone"
                 placeholder="Ingrese su teléfono"
                 required
             />
         </div>
         <div class="second-block-cta">
-            <select id="confirmacion" name="select-where" required>
+            <select id="confirmacion" name="confirmation" required>
                 <option value="">Confirmación:</option>
                 <option value="si">Sí, asistiremos</option>
                 <option value="no">Lo siento, no podremos asistir</option>
@@ -614,7 +615,7 @@
         <div class="second-dot-block-cta">
           <textarea
               id="mensaje"
-              name="mensaje"
+              name="message"
               placeholder="Mensaje para los novios"
           ></textarea>
         </div>
@@ -642,7 +643,7 @@
                     ></path>
                 </g>
             </svg>
-            <button class="btn btn-cta">Enviar</button>
+            <button class="btn btn-cta" type="submit">Enviar</button>
         </div>
     </form>
 </section>
