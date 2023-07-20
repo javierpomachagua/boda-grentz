@@ -33,7 +33,7 @@ html {
 
 /**************** PRIMERA PAGINA ****************/
 .main-section {
-    background-image: url(img/Fondos/1.jpg);
+    background-image: url("img/Fondos/1.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
@@ -168,7 +168,7 @@ h2 {
 /**************** SECCION IMAGENES ****************/
 
 .section-2 {
-    background-image: url(img/Fondos/2.jpg);
+    background-image: url("img/Fondos/2.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -228,7 +228,7 @@ h2 {
 /**************** SECCION 3 ****************/
 
 .section-3 {
-    background-image: url(img/Fondos/3.jpg);
+    background-image: url("img/Fondos/3.jpg");
     background-size: cover;
     background-position: center left;
 
@@ -386,7 +386,7 @@ h2 {
 
 /**************** SECCION 4 ****************/
 .section-4 {
-    background-image: url(img/Fondos/4.jpg);
+    background-image: url("img/Fondos/4.jpg");
     background-size: cover;
     background-position: center center;
 
@@ -474,7 +474,7 @@ h2 {
 /**************** SECCION 5 ****************/
 
 .section-5 {
-    background-image: url(img/Fondos/5.jpg);
+    background-image: url("img/Fondos/5.jpg");
     background-size: cover;
     background-position: center center;
 
@@ -608,7 +608,7 @@ h2 {
 
 @media (max-width: 1200px) {
     .section-4 {
-        background-image: url(img/Fondos/4.jpg);
+        background-image: url("img/Fondos/4.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
@@ -621,7 +621,7 @@ h2 {
 
 @media (max-width: 1070px) {
     .main-section {
-        background-image: url(img/Fondos/1.jpg);
+        background-image: url("img/Fondos/1.jpg");
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center top;
@@ -641,7 +641,7 @@ h2 {
         border-radius: 2%;
     }
     .section-3 {
-        background-image: url(img/Fondos/3.jpg);
+        background-image: url("img/Fondos/3.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -654,7 +654,7 @@ h2 {
 
 @media (max-width: 704px) {
     .main-section {
-        background-image: url(img/Fondos/1.jpg);
+        background-image: url("img/Fondos/1.jpg");
         background-size: 180%;
         background-repeat: no-repeat;
         background-position: center top;
@@ -769,7 +769,7 @@ h2 {
     }
 
     .section-5 {
-        background-image: url(img/Fondos/5.jpg);
+        background-image: url("img/Fondos/5.jpg");
         background-size: 160%;
         background-position: center bottom;
         background-repeat: no-repeat;
@@ -928,7 +928,7 @@ h2 {
 
 @media (max-width: 544px) {
     .main-section {
-        background-image: url(img/Fondos/1.jpg);
+        background-image: url("img/Fondos/1.jpg");
         background-size: 150%;
         background-repeat: no-repeat;
         background-position: center top;
@@ -1304,7 +1304,7 @@ h2 {
 
 @media (max-width: 375px) {
     .main-section {
-        background-image: url(img/Fondos/1.jpg);
+        background-image: url("img/Fondos/1.jpg");
         background-size: 180%;
         background-repeat: no-repeat;
         background-position: center top;
