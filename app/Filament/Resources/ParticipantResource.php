@@ -46,4 +46,9 @@ class ParticipantResource extends Resource
             'edit' => Pages\EditParticipant::route('/{record}/edit'),
         ];
     }
+
+    protected static function getNavigationLabel(): string
+    {
+        return "Participantes";
+    }
 }

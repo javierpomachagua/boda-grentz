@@ -1,5 +1,3 @@
-import './bootstrap';
-
 // Fecha objetivo (puede ser cualquier fecha en el futuro)
 const fechaObjetivo = new Date("2023-08-12T23:59:59").getTime();
 
@@ -46,10 +44,10 @@ function toggleReproduccion() {
     }
 }
 
-///// la barra ////
+///// la barra de musica ////
 
-var reproductor2 = document.getElementById("reproductor");
-var progreso = document.getElementById("progreso");
+const reproductor2 = document.getElementById("reproductor");
+const progreso = document.getElementById("progreso");
 
 reproductor.addEventListener("timeupdate", actualizarBarraReproduccion);
 
@@ -59,4 +57,32 @@ function actualizarBarraReproduccion() {
     progreso.style.width = porcentajeProgreso + "%";
 }
 
-////// efecto de btn-gifs grande////
+////// efecto de las fotos de la boda ////
+
+function mostrarModal(src) {
+    const modal = document.getElementById("modal");
+    const imagenModal = document.getElementById("imagen-modal");
+
+    imagenModal.src = src;
+    modal.style.display = "block";
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+////// efecto de btn mesa de regalos ////
+
+function cambiarMensaje() {
+    const mensaje1 = document.getElementById("tittle-gifs");
+    const mensaje2 = document.getElementById("gifs-words");
+
+    if (mensaje1.style.display === "none") {
+        mensaje1.style.display = "block";
+        mensaje2.style.display = "none";
+    } else {
+        mensaje1.style.display = "none";
+        mensaje2.style.display = "block";
+    }
+}

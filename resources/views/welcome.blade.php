@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="{{ asset('/img/imageedit_4_5769103270.png') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +22,7 @@
     <div class="main-section-flex">
         <img
             class="symbols-letters"
-            src="img/coollogo_com-291581142.png"
+            src="{{ asset('/img/coollogo_com-291581142.png') }}"
             alt="LG logo"
         />
         <h1 class="main-tittle">LEONELA & GRENTZ</h1>
@@ -72,7 +73,8 @@
             <div>
                 <audio
                     id="reproductor"
-                    src="Bruno Mars - Marry You.mp3"
+                    src="{{ asset('Bruno Mars - Marry You.mp3') }} "
+                    autoplay
                     loop
                 ></audio>
                 <button id="boton-reproducir" onclick="toggleReproduccion()">
@@ -119,41 +121,45 @@
 <section class="section-2">
     <div class="Images-wedding">
         <img
-            src="img/Leonela & Grentz PreBoda 1.webp"
-            width="330"
-            height="495"
+            src=" {{ asset("img/Leonela & Grentz PreBoda 1.webp") }}"
+            width="300"
+            height="480"
             alt="Leo&Grentz photo1"
+            onclick="mostrarModal(this.src)"
         />
         <img
-            src="img/Leonela & Grentz PreBoda 2.webp"
-            width="330"
-            height="495"
+            src="{{ asset("img/Leonela & Grentz PreBoda 2.webp") }}"
+            width="300"
+            height="480"
             alt="Leo&Grentz photo2"
+            onclick="mostrarModal(this.src)"
         />
         <img
-            src="img/Leonela & Grentz PreBoda 5.webp"
-            width="330"
-            height="495"
+            src="{{ asset("img/Leonela & Grentz PreBoda 5.webp") }}"
+            width="300"
+            height="480"
             alt="Leo&Grentz photo1"
+            onclick="mostrarModal(this.src)"
         />
         <img
-            src="img/Leonela & Grentz PreBoda 16.webp"
-            width="330"
-            height="495"
+            src="{{ asset("img/Leonela & Grentz PreBoda 16.webp") }}"
+            width="300"
+            height="480"
             alt="Leo&Grentz photo16"
+            onclick="mostrarModal(this.src)"
         />
         <img
-            src="img/Leonela & Grentz PreBoda 20.webp"
-            width="330"
-            height="495"
+            src="{{ asset("img/Leonela & Grentz PreBoda 20.webp") }}"
+            width="300"
+            height="480"
             alt="Leo&Grentz photo20"
+            onclick="mostrarModal(this.src)"
         />
-        <!-- <img
-          src="img/Leonela & Grentz PreBoda 28.webp"
-          width="650"
-          height="400"
-          alt="Leo&Grentz photo28"
-        /> -->
+    </div>
+
+    <div id="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="imagen-modal" src="" alt="" />
     </div>
 </section>
 
@@ -207,12 +213,19 @@
                 ></path>
             </g>
         </svg>
-        <span class="tittle">• CEREMONIA •</span>
+        <div class="tittle tittle-c-matrimonial">
+            <div class="tittle-dots">•</div>
+            <div>CONSEJO <br />MATRIMONIAL</div>
+            <div class="tittle-dots">•</div>
+        </div>
         <span class="hour"> 5:00pm </span>
-        <span class="location"> Salon </span>
-        <span class="Zarumilla">Zarumilla</span>
-        <p class="address">Sao Paulo #1751</p>
-        <button class="btn">Ver mapa</button>
+        <span class="location"
+        >Salón Arequipa <br />Hotel Estelar Miraflores
+        </span>
+        <p class="address">Av. Alfredo Benavides #415</p>
+        <a href="https://goo.gl/maps/q6987A4sjfi3iiqV9" target="_blank"
+        ><button class="btn">Ver mapa</button></a
+        >
     </div>
     <div class="recepcion">
         <svg
@@ -282,24 +295,279 @@
                 </g>
             </g>
         </svg>
-        <span class="tittle">• RECEPCIÓN •</span>
-        <span class="hour"> 6:30pm </span>
-        <span class="location"> HOTEL OLIVAR </span>
-        <span class="miraflores">Miraflores</span>
-        <p class="address">Av. Larco #5676</p>
-        <button class="btn">Ver mapa</button>
+        <span class="tittle tittle-recepcion">• RECEPCIÓN •</span>
+        <span class="hour"> 7:00pm </span>
+        <span class="location"
+        >Salón Ricardo Palma <br />Hotel Estelar Miraflores</span
+        >
+        <p class="address">Av. Alfredo Benavides #415</p>
+        <a href="https://goo.gl/maps/q6987A4sjfi3iiqV9" target="_blank"
+        ><button class="btn">Ver mapa</button></a
+        >
+    </div>
+</section>
+
+<section class="section-3-1">
+    <div class="barra-icons">
+        <svg
+            preserveAspectRatio="xMidYMid meet"
+            data-bbox="66.6 66.6 291.8 291.8"
+            viewBox="66.6 66.6 291.8 291.8"
+            xmlns="http://www.w3.org/2000/svg"
+            data-type="color"
+            role="presentation"
+            aria-hidden="true"
+            class="barra-icon"
+        >
+            <defs>
+                <style>
+                    #comp-lfyn2ym4 svg [data-color="1"] {
+                        fill: #ffffff;
+                    }
+                    #comp-lfyn2ym4 svg [data-color="2"] {
+                        fill: #000000;
+                    }
+                </style>
+            </defs>
+            <g>
+                <path
+                    fill="#faf7e4e0"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M358.4 212.5c0 80.578-65.322 145.9-145.9 145.9S66.6 293.078 66.6 212.5 131.922 66.6 212.5 66.6s145.9 65.322 145.9 145.9z"
+                    data-color="1"
+                ></path>
+                <path
+                    fill="#4c0b16"
+                    d="m122.3 169.9 36 12.8 4.1-37.9-40.1 25.1z"
+                    data-color="2"
+                ></path>
+                <path
+                    fill="#4c0b16"
+                    d="m154 137.9-34.2 21.5 2.5 10.5 40.1-25.1-8.4-6.9z"
+                    data-color="2"
+                ></path>
+                <path
+                    fill="#4c0b16"
+                    d="m257.4 108.4 8.9 26.6 23.8-14.9-32.7-11.7z"
+                    data-color="2"
+                ></path>
+                <path
+                    fill="#4c0b16"
+                    d="m290.3 112.1-28-10-4.9 6.3 32.7 11.7.2-8z"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M230.9 319c1 2.6-.3 5.6-3 6.6-9.6 3.6-19.5 5.3-29.4 5.3-28.4 0-55.9-14.4-71.7-39.5-11.9-19.1-15.8-41.7-10.7-63.6s18.3-40.6 37.4-52.6c11-6.9 23.2-11.1 35.7-12.4.6-.1 1.2-.1 1.8-.2h.5c1.2-.1 2.3-.2 3.5-.2h3.1c1.3 0 2.4 0 3.5.1l1.1.1 2 .1h.4c4 .3 8 1 12 1.9 22 5 40.6 18.3 52.6 37.4 4.5 7.2 7.8 14.8 9.9 22.6.4 1.4.8 2.9 1.1 4.4.8 3.8 1.3 7.6 1.6 11.4-3.1 2.1-6.5 3.9-9.9 5.3 0-3.6-.3-7.2-.9-10.8-.2-1.4-.5-2.8-.8-4.2-1.8-8.1-5-16-9.5-23.3-10.5-16.8-26.9-28.5-46.2-32.9-6.1-1.4-12.2-2-18.3-1.9-3.6.1-7.2.4-10.8 1-9.4 1.6-18.5 5.1-26.9 10.3-16.8 10.5-28.4 26.9-32.9 46.2-4.4 19.3-1.1 39.2 9.4 55.9 18.6 29.7 56 42.4 88.8 30.1 2.6-1.1 5.6.3 6.6 2.9z"
+                    fill="#4c0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M282.5 244.9c.5 23.1-8.5 46.1-26 62.8-2 1.9-5.3 1.9-7.2-.2-1.9-2-1.9-5.3.2-7.2 14.2-13.5 22-31.7 22.8-50.3.6-.2 1.1-.4 1.6-.7 2.9-1.3 5.8-2.7 8.6-4.4z"
+                    fill="#4c0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M221.8 239.7c-1.5 2.4-4.6 3.2-7 1.7-22.1-13.4-33.5-38.8-29.8-63.6.2-1.4.5-2.9.8-4.3.6-2.6 1.3-5.1 2.2-7.6.4-1.1.8-2.1 1.2-3.1 3.8-.4 7.6-.6 11.5-.4-1.2 2.2-2.2 4.6-3.1 7-.4 1.1-.7 2.1-1 3.2-.4 1.3-.7 2.7-1 4.1-4.4 21.7 5.2 44.4 24.5 56.1 2.4 1.3 3.2 4.5 1.7 6.9z"
+                    fill="#4c0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M307.3 208.5c-4.2 11.8-11.7 21.7-21.2 28.9-1.2 1-2.5 1.9-3.9 2.7-3.1 2.1-6.5 3.9-9.9 5.3-1.3.6-2.7 1.1-4.1 1.6-6.6 2.3-13.5 3.5-20.7 3.5-2.9 0-5.9-.2-8.9-.6-2.8-.4-4.7-3-4.3-5.8.4-2.8 3-4.7 5.8-4.3 9.5 1.4 18.9.1 27.4-3.4 1.3-.5 2.6-1.1 3.9-1.7 3.3-1.7 6.4-3.6 9.3-5.9 1.2-1 2.4-2 3.5-3 6-5.6 10.7-12.6 13.6-20.7 4.8-13.4 4.1-27.8-2-40.6S279 142 265.7 137.2c-13.4-4.8-27.8-4.1-40.6 2-9.1 4.3-16.6 10.9-21.9 19.2-1.6-.1-3.2-.1-4.9-.1-2.3 0-4.6.1-6.9.3 14.2-28 47.5-41.8 77.8-30.9 32.7 11.6 49.9 47.9 38.1 80.8z"
+                    fill="#4c0b16"
+                    data-color="2"
+                ></path>
+            </g>
+        </svg>
+        <svg
+            preserveAspectRatio="xMidYMid meet"
+            data-bbox="52.2 52 320.6 329.4"
+            viewBox="52.2 52 320.6 329.4"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+            data-type="color"
+            role="presentation"
+            aria-hidden="true"
+            class="barra-icon"
+        >
+            <defs>
+                <style>
+                    #comp-lg2xqprj svg [data-color="1"] {
+                        fill: #4c0b16;
+                    }
+                </style>
+            </defs>
+            <g>
+                <path
+                    d="M212.5 372.6c-88.4 0-160.3-71.9-160.3-160.3S124.1 52 212.5 52s160.3 72 160.3 160.4c0 88.3-71.9 160.2-160.3 160.2zm0-319.5c-87.8 0-159.3 71.5-159.3 159.3s71.5 159.3 159.3 159.3 159.3-71.5 159.3-159.3S300.3 53.1 212.5 53.1z"
+                    fill="#faf7e4e0"
+                    data-color="1"
+                ></path>
+                <defs>
+                    <path
+                        d="M212.5 52.6c88.2 0 159.8 70.5 159.8 157.4s-71.9 162.4-160.1 162.4C124 372.4 52.7 296.9 52.7 210S124.3 52.6 212.5 52.6z"
+                        id="svgcid--wzfoh1-nelas"
+                    ></path>
+                </defs>
+                <clipPath id="svgcid-vazdvj-1ej64q">
+                    <use overflow="visible" xlink:href="#svgcid--wzfoh1-nelas"></use>
+                </clipPath>
+                <g clip-path="url(#svgcid-vazdvj-1ej64q)">
+                    <path
+                        d="m212.3 217.9-92.1 31.4v132h71.5V322c0-11.9 9.8-21.6 22-21.6 12.1 0 22 9.7 22 21.6v59.4h69.7v-132l-93.1-31.5zm-49.6 82.3h-20.9v-16.4c0-5.8 4.7-10.5 10.5-10.5s10.5 4.7 10.5 10.5v16.4zm121 0h-20.9v-16.4c0-5.8 4.7-10.5 10.5-10.5s10.5 4.7 10.5 10.5v16.4z"
+                        fill="#4c0b16"
+                        data-color="1"
+                    ></path>
+                </g>
+
+                <path
+                    d="m212.6 128.9-44.5 23.9.4 76.5 43.8-13.1 44.5 12.4.1-75.8-44.3-23.9zm10.6 60.4h-20.9v-16.4c0-5.8 4.7-10.5 10.5-10.5s10.5 4.7 10.5 10.5v16.4z"
+                    fill="#4c0b16"
+                    data-color="1"
+                ></path>
+            </g>
+        </svg>
+        <svg
+            preserveAspectRatio="xMidYMid meet"
+            data-bbox="53 52 320 320"
+            viewBox="53 52 320 320"
+            xmlns="http://www.w3.org/2000/svg"
+            data-type="color"
+            role="presentation"
+            aria-hidden="true"
+            aria-labelledby="svgcid-q9om2a-aaw04v"
+            class="barra-icon"
+        >
+            <defs>
+                <style>
+                    #comp-lfyn2ymc svg [data-color="1"] {
+                        fill: #ffffff;
+                    }
+                    #comp-lfyn2ymc svg [data-color="2"] {
+                        fill: #000000;
+                    }
+                </style>
+            </defs>
+            <title id="svgcid-q9om2a-aaw04v"></title>
+            <g>
+                <path
+                    fill="#faf7e4e0"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M373 212c0 88.366-71.634 160-160 160S53 300.366 53 212 124.634 52 213 52s160 71.634 160 160z"
+                    data-color="1"
+                ></path>
+                <path
+                    d="M237.6 257.7c-5.2 2.3-10.4 4.5-15.6 6.8-18.8 8.5-37.5 17-56.3 25.4-15.2 6.8-30.4 13.6-45.6 20.3-2.3 1-4.9 2.2-7.2 2.1-7.4-.4-12.2-8.9-9.2-15.7 6.8-15.2 13.7-30.3 20.5-45.5 10.4-23.2 20.8-46.5 31.2-69.7 1-2.2 2-4.3 3-6.4-2.5 6.4-1 12.5 1.3 18.5 4.6 12 12.2 22 20.7 31.4 9.8 10.7 20.7 20.3 33.7 27.1 7.3 3.9 14.9 7.2 23.5 5.7z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M240.6 254.7c-8.7 1.5-16.2-1.8-23.5-5.7-13-6.8-23.9-16.4-33.7-27.1-8.5-9.3-16.1-19.4-20.7-31.4-2.3-6-3.8-12.1-1.3-18.5 3.2-4.2 7.8-5.1 12.4-4 5.3 1.2 10.8 2.7 15.5 5.4 23.6 12.9 41.8 31.3 53.9 55.4 2 3.9 3.1 8.3 3.9 12.7 1.4 6.4-.9 10.6-6.5 13.2z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M249.1 185.5h-1.7c-2.6-.2-3.9-1.4-3.9-3.5 0-2.4 1.5-3.3 3.6-3.5 3.7-.3 7.4-.4 11-1.1 12.2-2.3 20.1-9.8 24.6-21.1 2.9-7.3 5.3-14.7 8.2-22 1.5-3.7 3.3-7.4 5.6-10.6 5.3-7.4 12.8-10.5 21.8-10.4 2 0 3.6.7 3.8 3 .2 2.3-1.1 3.3-3.1 3.8-1.3.3-2.6.4-3.9.6-5.6.6-10.3 2.9-13.2 7.7-2.6 4.3-4.5 9.1-6.5 13.8-3.1 7.3-5.5 14.9-9 21.9-6.3 13-17.5 19.2-31.5 20.9-1.8.2-3.8.4-5.8.5z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M216.7 138.7c-.4 5.7-1.4 9.7-4 12.8-3.5 4.2-7.4 8.2-11.3 12-1.9 1.8-3.9 1.7-5.2.1-1.5-1.6-1.3-3.4.7-5.4 2.8-2.8 5.8-5.4 8.3-8.4 4.9-5.8 5.5-12.2 1.7-18.8-2.3-4-4.8-7.9-7.2-11.8-4.1-6.5-7.4-13.2-7.9-21-.1-1-.1-2 .1-2.9.4-1.8 1.7-2.6 3.4-2.6s2.8 1 3.1 2.6c.3 1.7.4 3.4.7 5.1 1 5.4 3.4 10.1 6.2 14.7 2.9 4.7 6 9.3 8.4 14.2 1.8 3.3 2.4 7.2 3 9.4z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M317.3 226.6c-7.7-.3-14.4-3.3-20.8-7.1-4.7-2.8-9.2-5.8-13.8-8.6-9.1-5.5-15.9-4.8-23.9 2.2-1.1 1-2.2 2-3.5 2.7-1.5.9-3 .6-4.2-.8-1.2-1.4-1.1-2.9.1-4.2 5.6-6.1 12.3-10.1 20.9-10.4 4.8-.2 8.9 1.5 12.9 3.8 5.3 3.1 10.5 6.5 15.8 9.7 5.5 3.4 11.3 5.8 17.8 6 2.6.1 3.8 1.5 3.7 3.7-.2 2.1-1.7 3-5 3z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M250.6 102.6c2 2 4.1 3.9 6.1 5.9 3.5 3.5 3.5 3.5 7.8 1.2 2.5-1.3 5.1-2.5 7.7-3.8.2.1.4.3.6.4-.4 1.2-.6 2.5-1.1 3.6-.4 1-1 1.9-1.5 2.8-3.4 5.4-3.2 6.4 1.6 10.5 1.8 1.6 3.4 3.4 5.2 5.1-.1.2-.1.4-.2.7-.9 0-1.8.1-2.7 0-2.4-.3-4.9-.7-7.3-1.2-3.4-.6-4.2-.3-5.7 2.7-1.6 3.1-3.2 6.3-4.8 9.4h-.7c-.5-3.2-1.2-6.3-1.5-9.5-.5-4.1-1.1-4.8-5.3-5.4-3-.4-6-1-9.3-2.1 1.7-1 3.3-2.2 5.1-3 9-4 7.1-4.4 5.9-11.7-.3-1.7-.3-3.5-.5-5.3.1 0 .4-.2.6-.3z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M226 113.2c-3.6-.1-6.8-3.3-6.7-6.9 0-3.6 3.2-6.8 6.8-6.8 3.6 0 7 3.4 6.9 7-.1 3.6-3.4 6.8-7 6.7z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M308.4 182.1c0 3.9-2.9 6.7-6.7 6.7-3.9 0-6.8-3-6.8-6.9 0-3.8 3-6.7 6.7-6.7 4-.1 6.9 2.9 6.8 6.9z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M305.3 264.4c-3.7.1-7-3.1-7-6.8 0-3.7 3-6.8 6.6-6.9 3.7-.1 7 3 7 6.8.2 3.5-3.1 6.9-6.6 6.9z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+                <path
+                    d="M181.4 147.5c-3.8 0-6.7-3-6.6-6.8 0-3.9 3-6.8 7-6.7 3.8.1 6.5 3 6.5 6.9-.2 3.9-3 6.6-6.9 6.6z"
+                    fill="#4e0b16"
+                    data-color="2"
+                ></path>
+            </g>
+        </svg>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="barra-icon icon-food"
+        >
+            <path
+                d="M57.49 47.74l368.43 368.43a37.28 37.28 0 010 52.72h0a37.29 37.29 0 01-52.72 0l-90-91.55a32 32 0 01-9.2-22.43v-5.53a32 32 0 00-9.52-22.78l-11.62-10.73a32 32 0 00-29.8-7.44h0a48.53 48.53 0 01-46.56-12.63l-85.43-85.44C40.39 159.68 21.74 83.15 57.49 47.74z"
+                fill="#4c0b16"
+                stroke="#4c0b16"
+                stroke-linejoin="round"
+                stroke-width="23"
+            />
+            <path
+                d="M400 32l-77.25 77.25A64 64 0 00304 154.51v14.86a16 16 0 01-4.69 11.32L288 192M320 224l11.31-11.31a16 16 0 0111.32-4.69h14.86a64 64 0 0045.26-18.75L480 112M440 72l-80 80M200 368l-99.72 100.28a40 40 0 01-56.56 0h0a40 40 0 010-56.56L128 328"
+                fill="#4c0b16"
+                stroke="#4c0b16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="23"
+            />
+        </svg>
+    </div>
+
+    <div>
+        <img
+            src="{{ asset('img/barra-213.png') }}"
+            alt="barra-eventos"
+            fetchpriority="high"
+            class="barra-img"
+        />
+    </div>
+    <div class="barra-letras">
+        <span class="barra-letra barra-letra-br barra-letra-1"
+        >CEREMONIA <br />CIVIL</span
+        >
+        <span class="barra-letra barra-letra-br barra-letra-2"
+        >CONSEJO <br />MATRIMONIAL</span
+        >
+        <span class="barra-letra barra-letra-3">FIESTA</span>
+        <span class="barra-letra barra-letra-4">CENA</span>
+    </div>
+    <div class="barra-horas">
+        <span class="barra-hora">12:00pm</span>
+        <span class="barra-hora">5:00pm</span>
+        <span class="barra-hora">7:00pm</span>
+        <span class="barra-hora">9:00pm</span>
     </div>
 </section>
 
 <section class="section-4">
-    <div class="gifs">
-        <span class="tittle tittle-gifs">MESA DE REGALOS</span>
-        <p class="gifs-words">
-            Su presencia es nuestro mejor regalo, pero si desean hacernos un
-            obsequio, ponemos a su disposición nuestras sugerencias.
+    <div class="gifs" onclick="cambiarMensaje()">
+        <span id="tittle-gifs">MESA DE REGALOS</span>
+
+        <p id="gifs-words" style="display: none">
+            Su presencia es nuestro mejor regalo, pero si desean hacernos llegar
+            un presente enviarlo a
+            <strong>"Jr. Rebeca Oquendo 409 - Breña - Recepción"</strong>.
+            <br />Muchas Gracias!!!🎉
         </p>
-        <button class="btn btn-gifs">Colombia</button>
-        <p>N° Cuenta 1123350926025</p>
     </div>
 </section>
 
@@ -319,35 +587,34 @@
         <span class="asistencia">CONFIRMA TU ASISTENCIA</span>
         <span></span>
     </div>
-    <form class="cta-form" method="POST" action="/save-confirmation">
-        @csrf
+    <form class="cta-form">
         <div class="first-block-cta">
             <input
                 id="nombre-completo"
                 type="text"
                 placeholder="Nombre completo"
-                name="name"
+                name="full-name"
                 required
             />
             <input
                 type="tel"
                 id="telefono"
-                name="cellphone"
+                name="telefono"
                 placeholder="Ingrese su teléfono"
                 required
             />
         </div>
         <div class="second-block-cta">
-            <select id="confirmacion" name="confirmation" required>
+            <select id="confirmacion" name="select-where" required>
                 <option value="">Confirmación:</option>
-                <option value="Sí">Sí, asistiremos</option>
-                <option value="No">Lo siento, no podremos asistir</option>
+                <option value="si">Sí, asistiremos</option>
+                <option value="no">Lo siento, no podremos asistir</option>
             </select>
         </div>
         <div class="second-dot-block-cta">
           <textarea
               id="mensaje"
-              name="message"
+              name="mensaje"
               placeholder="Mensaje para los novios"
           ></textarea>
         </div>
@@ -375,7 +642,7 @@
                     ></path>
                 </g>
             </svg>
-            <button class="btn btn-cta" type="submit">Enviar</button>
+            <button class="btn btn-cta">Enviar</button>
         </div>
     </form>
 </section>
