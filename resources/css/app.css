@@ -474,7 +474,7 @@ h2 {
 /**************** SECCION 5 ****************/
 
 .section-5 {
-    background-image: url("img/Fondos/5.jpg");
+    background-image: url("/img/Fondos/5.jpg");
     background-size: cover;
     background-position: center center;
 
