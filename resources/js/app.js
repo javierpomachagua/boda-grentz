@@ -34,7 +34,7 @@ const intervalo = setInterval(function () {
 const reproductor = document.getElementById("reproductor");
 const botonReproducir = document.getElementById("boton-reproducir");
 
-function toggleReproduccion() {
+window.toggleReproduccion = function() {
     if (reproductor.paused) {
         reproductor.play();
         botonReproducir.innerHTML = `<ion-icon name="pause" class="btn-music"></ion-icon>`;
@@ -49,17 +49,17 @@ function toggleReproduccion() {
 const reproductor2 = document.getElementById("reproductor");
 const progreso = document.getElementById("progreso");
 
-reproductor.addEventListener("timeupdate", actualizarBarraReproduccion);
-
-function actualizarBarraReproduccion() {
+window.actualizarBarraReproduccion = function() {
     var porcentajeProgreso =
         (reproductor.currentTime / reproductor.duration) * 100;
     progreso.style.width = porcentajeProgreso + "%";
 }
 
+reproductor.addEventListener("timeupdate", actualizarBarraReproduccion);
+
 ////// efecto de las fotos de la boda ////
 
-function mostrarModal(src) {
+window.mostrarModal = function (src) {
     const modal = document.getElementById("modal");
     const imagenModal = document.getElementById("imagen-modal");
 
@@ -67,14 +67,14 @@ function mostrarModal(src) {
     modal.style.display = "block";
 }
 
-function cerrarModal() {
+window.cerrarModal = function() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
 }
 
 ////// efecto de btn mesa de regalos ////
 
-function cambiarMensaje() {
+window.cambiarMensaje = function() {
     const mensaje1 = document.getElementById("tittle-gifs");
     const mensaje2 = document.getElementById("gifs-words");
 
