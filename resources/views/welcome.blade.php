@@ -73,7 +73,7 @@
             <div>
                 <audio
                     id="reproductor"
-                    src="{{ asset('Bruno Mars - Marry You.mp3') }} "
+                    src="{{ asset('/Bruno Mars - Marry You.mp3') }} "
                     autoplay
                     loop
                 ></audio>
