@@ -3,16 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ParticipantResource\Pages;
-use App\Filament\Resources\ParticipantResource\RelationManagers;
+use App\Filament\Widgets\StatsOverview;
 use App\Models\Participant;
-use Filament\Forms;
-use Filament\Pages\Actions\DeleteAction;
-use Filament\Resources\Form;
+use Closure;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 
 class ParticipantResource extends Resource
 {
@@ -26,14 +23,26 @@ class ParticipantResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->label('Nombre'),
                 Tables\Columns\TextColumn::make('cellphone')->label('Celular'),
-                Tables\Columns\TextColumn::make('confirmation')->label('Confirmación'),
+                Tables\Columns\IconColumn::make('confirmation')->label('Confirmación')
+                    ->options([
+                        'heroicon-o-check' => 'si',
+                        'heroicon-o-x' => 'no',
+                    ])
+                    ->colors([
+                        'success' => 'si',
+                        'secondary' => 'no'
+                    ]),
                 Tables\Columns\TextColumn::make('message')->label('Mensaje'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Fecha de Registro')
-                    ->dateTime()
+                    ->dateTime('d-m-Y h:i A')
             ])
             ->filters([
                 //
+            ])
+            ->headerActions([
+                ExportAction::make()
+                    ->label('Exportar')
             ])
             ->actions([
                 Tables\Actions\DeleteAction::make()
