@@ -6,6 +6,7 @@ use App\Filament\Resources\ParticipantResource\Pages;
 use App\Filament\Resources\ParticipantResource\RelationManagers;
 use App\Models\Participant;
 use Filament\Forms;
+use Filament\Pages\Actions\DeleteAction;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -27,16 +28,24 @@ class ParticipantResource extends Resource
                 Tables\Columns\TextColumn::make('cellphone')->label('Celular'),
                 Tables\Columns\TextColumn::make('confirmation')->label('Confirmación'),
                 Tables\Columns\TextColumn::make('message')->label('Mensaje'),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Fecha de Registro')
+                    ->dateTime()
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
+    }
+
+    public static function canCreate(): bool
+    {
+        return false;
     }
 
     public static function getPages(): array
@@ -45,6 +54,11 @@ class ParticipantResource extends Resource
             'index' => Pages\ListParticipants::route('/'),
             'edit' => Pages\EditParticipant::route('/{record}/edit'),
         ];
+    }
+
+    public static function getBreadcrumb(): string
+    {
+        return 'Participantes';
     }
 
     protected static function getNavigationLabel(): string

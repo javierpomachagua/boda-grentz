@@ -13,7 +13,11 @@ class ListParticipants extends ListRecords
     protected function getActions(): array
     {
         return [
-            Actions\CreateAction::make(),
         ];
+    }
+
+    protected function getTitle(): string
+    {
+        return "Participantes";
     }
 }
