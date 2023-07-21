@@ -23,10 +23,10 @@ class ParticipantResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('cellphone'),
-                Tables\Columns\TextColumn::make('confirmation'),
-                Tables\Columns\TextColumn::make('message'),
+                Tables\Columns\TextColumn::make('name')->label('Nombre'),
+                Tables\Columns\TextColumn::make('cellphone')->label('Celular'),
+                Tables\Columns\TextColumn::make('confirmation')->label('Confirmación'),
+                Tables\Columns\TextColumn::make('message')->label('Mensaje'),
             ])
             ->filters([
                 //
