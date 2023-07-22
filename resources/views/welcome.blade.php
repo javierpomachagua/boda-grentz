@@ -12,6 +12,20 @@
         rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+        rel="stylesheet"
+    />
+
     <title>Boda Leonela & Grentz | Invitación</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -22,7 +36,7 @@
     <div class="main-section-flex">
         <img
             class="symbols-letters"
-            src="{{ asset('/img/coollogo_com-291581142.png') }}"
+            src="{{ asset("/img/coollogo_com-291581142.png") }}"
             alt="LG logo"
         />
         <h1 class="main-tittle">LEONELA & GRENTZ</h1>
@@ -73,7 +87,7 @@
             <div>
                 <audio
                     id="reproductor"
-                    src="{{ asset('/Bruno Mars - Marry You.mp3') }} "
+                    src="{{ asset("/Bruno Mars - Marry You.mp3") }}"
                     autoplay
                     loop
                 ></audio>
@@ -121,35 +135,35 @@
 <section class="section-2">
     <div class="Images-wedding">
         <img
-            src=" {{ asset("img/Leonela & Grentz PreBoda 1.webp") }}"
+            src="{{ asset("/img/Leonela & Grentz PreBoda 1.webp") }}"
             width="300"
             height="480"
             alt="Leo&Grentz photo1"
             onclick="mostrarModal(this.src)"
         />
         <img
-            src="{{ asset("img/Leonela & Grentz PreBoda 2.webp") }}"
+            src="{{ asset("/img/Leonela & Grentz PreBoda 2.webp") }}"
             width="300"
             height="480"
             alt="Leo&Grentz photo2"
             onclick="mostrarModal(this.src)"
         />
         <img
-            src="{{ asset("img/Leonela & Grentz PreBoda 5.webp") }}"
+            src="{{ asset("/img/Leonela & Grentz PreBoda 5.webp") }}"
             width="300"
             height="480"
             alt="Leo&Grentz photo1"
             onclick="mostrarModal(this.src)"
         />
         <img
-            src="{{ asset("img/Leonela & Grentz PreBoda 16.webp") }}"
+            src="{{ asset("/img/Leonela & Grentz PreBoda 16.webp") }}"
             width="300"
             height="480"
             alt="Leo&Grentz photo16"
             onclick="mostrarModal(this.src)"
         />
         <img
-            src="{{ asset("img/Leonela & Grentz PreBoda 20.webp") }}"
+            src="{{ asset("/img/Leonela & Grentz PreBoda 20.webp") }}"
             width="300"
             height="480"
             alt="Leo&Grentz photo20"
@@ -161,8 +175,15 @@
         <span class="cerrar" onclick="cerrarModal()">&times;</span>
         <img id="imagen-modal" src="" alt="" />
     </div>
-</section>
 
+    <div class="section-texto">
+        <span class="texto"
+        >“Por lo tanto, lo que Dios ha unido, que no lo separe ningún hombre”
+          <br />
+          (Marcos 10:9).</span
+        >
+    </div>
+</section>
 <section class="section-3">
     <div class="ceremonia">
         <svg
@@ -534,7 +555,7 @@
 
     <div>
         <img
-            src="{{ asset('img/barra-213.png') }}"
+            src="{{ asset("/img/barra-213.png") }}"
             alt="barra-eventos"
             fetchpriority="high"
             class="barra-img"

@@ -57,7 +57,7 @@ html {
 h1 {
     font-size: 48px;
     font-weight: 900;
-    font-style: oblique;
+    font-family: "Petit Formal Script", cursive;
 }
 
 .symbol {
@@ -317,6 +317,21 @@ h2 {
 .btn:active {
     background-color: #4e0b16;
     color: #fff;
+}
+
+/**************** SECCION 2.1 texto ****************/
+
+.texto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: none;
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
+
+    padding: 0px 0px 50px 0px;
 }
 
 /**************** SECCION 3-1 ****************/
@@ -723,6 +738,10 @@ h2 {
     .btn {
         font-size: 18px;
         padding: 12px 30px;
+    }
+
+    .texto {
+        font-size: 24px;
     }
 
     .barra-icons {
@@ -1370,6 +1389,10 @@ h2 {
     .section-3 {
         gap: 0px;
         padding: 70px 0px;
+    }
+
+    .texto {
+        font-size: 18px;
     }
 
     .icon {
