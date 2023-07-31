@@ -45,10 +45,10 @@ class ParticipantResource extends Resource
                     ->label('Exportar')
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make()
+//                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+//                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
