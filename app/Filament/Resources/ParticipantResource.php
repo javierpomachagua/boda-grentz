@@ -32,7 +32,9 @@ class ParticipantResource extends Resource
                         'success' => 'si',
                         'secondary' => 'no'
                     ]),
-                Tables\Columns\TextColumn::make('message')->label('Mensaje'),
+                Tables\Columns\TextColumn::make('message')
+                    ->label('Mensaje')
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Fecha de Registro')
                     ->dateTime('d-m-Y h:i A')
